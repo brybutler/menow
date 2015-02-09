@@ -1,0 +1,15 @@
+<div ng-hide="user">
+    <form method="post" ng-submit="signin.signin()">
+        Phone: <input ng-model="signin.phone" type="text" /><br />
+        Password: <input ng-model="signin.password" type="password" /><br />
+        <input type="submit" />
+    </form>
+     <input type="button" value="Logout" ng-click="sigin.logout()" />
+</div>
+
+
+<div ng-show="user">
+	<user-info></user-info>
+    <main-nav></main-nav>
+    <p>Signed in</p>
+</div>

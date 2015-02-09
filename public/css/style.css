@@ -1,0 +1,235 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+	
+	color: #333333;
+	background: #f9f9f9;
+}
+
+.actionList {
+  display: none;
+  position: absolute;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #000;
+  z-index: 1;
+}
+
+.actionList.active {
+  display: block;
+}
+
+    *{
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    [ng-drag]{
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    [ng-drag]{
+        
+        cursor: move;
+    }
+    ul.draggable-objects:after{
+        display: block;
+        content:"";
+        clear:both;
+    }
+    .draggable-objects li{
+    }
+    [ng-drag].drag-over{
+        opacity: 0.5;
+    }
+    [ng-drag].dragging{
+        opacity: 0.5;
+    }
+    [ng-drop]{
+        position: relative;
+    }
+    [ng-drop].drag-enter{
+        border:solid 5px red;
+    }
+    [ng-drop] span.title{
+        display: block;
+        position: absolute;
+    }
+    [ng-drop] div{
+        position: relative;
+        z-index: 2;
+    }
+
+
+header {
+	margin-top: 50px;
+	display: block;
+	width: 1024px;
+	margin: 0 auto;
+	position: relative;
+	height: 100px;
+	text-align: center;
+}
+
+nav {
+	right: 0px;
+	position: absolute;
+
+}
+
+nav ul {
+	list-style-type: none;
+
+
+}
+
+nav ul li {
+	display: inline-block;
+
+}
+
+nav ul li a {
+	text-decoration: none;
+}
+
+.logo {
+	display: block;
+	position: absolute;
+
+
+}
+
+.title {
+	height: inherit;
+	text-align: center;
+	display: inline-block;
+}
+
+.valign {
+	display: table-cell;
+	vertical-align: middle;
+	height: inherit;
+
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+
+h2 {
+	font-size: 15px;
+	font-weight: 300;
+	text-align: center;
+	margin: 0px;
+}
+
+h2.strong {
+
+	font-weight: 400;
+}
+
+.hexagonList {
+  list-style-type: none;
+}
+
+.hexagonList li {
+  display: inline-block;
+  float: left;
+  position: absolute;
+}
+
+.hexagonList li.even {
+  top: 130px;
+}
+
+.hexagon {
+  display: inline-block;
+  position: relative;
+  width: 70px; 
+  height: 40px;
+  margin: 20px 0;
+  float: left;
+  line-height: 40px;
+  text-align: center;
+
+  border-left: solid 1px #727272;
+  border-right: solid 1px #727272;
+  
+}
+
+.hexagon a {
+  width: inherit;
+  height: inherit;
+  display: block;
+  background-color: #ff0000;
+}
+
+
+.hexagon a  img {
+  vertical-align: middle;
+}
+
+.hexTop,
+.hexBottom {
+  background-image: none;
+  background-color: #ff0000;
+  position: absolute;
+  z-index: -1;
+  width: 49.50px;
+  height: 49.50px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  left: 9.25px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 68.0000px;
+  height: 39.25981830489455px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-19.6299px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-19.6299px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-19.6299px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.hexTop {
+  top: -25px;
+  border-top: solid 1px #727272;
+  border-right: solid 1px #727272;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -25px;
+  border-bottom: solid 1px #727272;
+  border-left: solid 1px #727272;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.5774px;
+  left: 0;
+  width: 68.0000px;
+  height: 39.2598px;
+  z-index: 2;
+  background: inherit;
+}

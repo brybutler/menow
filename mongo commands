@@ -1,0 +1,110 @@
+db.users.update(
+   { _id: ObjectId("5464d8a429cf078606f8199f") },
+   {
+   	name: "Bry Butler"
+   },
+   { upsert: false }
+)
+
+db.groups.update (
+  {
+  _id: ObjectId('547d90fb558adc2153047f85')
+  },{
+  $set: {
+      user_id: ObjectId('5464d8a429cf078606f8199f')
+    }
+  }
+)
+
+db.groups.insert (
+  {
+  action: "gone to bed",
+  message: "Asleep"
+  }
+)
+
+
+
+
+db.users.update(
+   { _id: ObjectId('54723865b3835d5ed4aaa627') },
+   {
+   	name: "Bryan Butler",
+   	phone: "0863247662",
+    userGroup: [ObjectId("546a1a405246e5a58a730368")]
+   },
+   { upsert: true }
+)
+
+db.users.update(
+   { _id: ObjectId("5464d8a429cf078606f8199f") },
+   {
+   	$set: {
+   		name: { firstname: "Bryan", surname: "Butler"}
+   	}
+   	
+   	
+   }
+)
+
+
+db.users.update(
+   { _id: ObjectId('547238e3b3835d5ed4aaa628') },
+   {
+   	$set: {
+   		groups: [  ObjectId("546a1a405246e5a58a730368") ]
+   	}
+   	
+   	
+   }
+)
+
+dm: ObjectId('547ded8f558adc2153047f87')
+
+db.users.update(
+   { _id: ObjectId('547238e3b3835d5ed4aaa628') },
+   {
+    $set: {
+      user_id: 
+    }
+    
+    
+   }
+)
+
+
+db.users.insert([{
+	name: {
+		firstname: "Dave",
+		surname: "Mullen"
+	},
+	phone: "087999999",
+
+
+
+
+}])
+
+
+db.groups_users.insert([{
+
+  parent_user_id: ObjectId(5464d8a429cf078606f8199f),
+  user_id: ObjectId(547238e3b3835d5ed4aaa628),
+  group_id: ObjectId('546a1a405246e5a58a730368')
+
+
+
+}])
+
+db.books.update(
+   { _id: 1 },
+   {
+     $inc: { stock: 5 },
+     $set: {
+       item: "ABC123",
+       "info.publisher": "2222",
+       tags: [ "software" ],
+       "ratings.1": { by: "xyz", rating: 3 }
+     }
+   }
+)

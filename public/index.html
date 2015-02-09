@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html data-ng-app="MeNowApp">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>MeNow</title>
+    <!--JQuery
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+      <!-- Angular -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <!-- UI-Router -->
+  <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+    <!-- Drag and drop -->
+  <script src="scripts/vendor/socket.io.js"></script>
+  <script src="scripts/vendor/draganddrop.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<body>
+    <div class="container">
+        
+        
+        <header class="rgHeader rg" ui-view="header"></header>
+        <section class="rgMain rg"  ui-view="main"></section>
+       
+    </div>
+
+
+
+   <script type="text/javascript" src="scripts/app.js"></script>
+   <script type="text/javascript" src="scripts/directives/directives_main.js"></script>
+   <script type="text/javascript" src="scripts/services/services_main.js"></script>
+   <script type="text/javascript" src="scripts/controllers/controllers_main.js"></script>
+   <script type="text/javascript" src="scripts/filters/f_main.js"></script>
+
+</body>
+</html>

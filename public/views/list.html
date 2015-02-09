@@ -1,0 +1,43 @@
+<user-info></user-info>
+<ul class="groups">
+    <li class="group" 
+        ng-attr-id="{{group._id}}" 
+        ng-repeat="group in list track by $index"  
+        ng-class="{even: $even, odd: $odd}" 
+        ui-on-Drop="onDrop(group._id,$data._id._id,$data,group.action, group.message,$index)"
+        ng-init="activeAction=false;groupIndex=$index"
+
+    >
+    	
+    	{{ group.name }} - 
+        <a href="" 
+            ng-attr-data-groupid="{{group._id}}" 
+            ng-model="actionButton" 
+            ng-click="activeAction=!activeAction" 
+            class="actionButton"
+            >{{ group.action }}</a> - 
+        {{ group.message }} - {{ group.order }}
+
+        <action-drop-down 
+            ng-attr-id="actionDropDown_{{group._id}}" 
+            ng-class="{ 'actionList active': activeAction, 'actionList': !activeAction }"
+            ></action-drop-down>
+
+        <ul class="contacts">
+            <li 
+                ng-repeat="contact in group.contacts track by $index" 
+                class="contact" 
+                ui-draggable="true"
+                drag="contact"
+                on-drop-success="dropSuccessHandler($event, group.user_id, contact._id._id,contact.group_id._id, group._id,$index,groupIndex)"
+            >
+                {{ contact._id.name.firstname }} {{ contact._id.name.surname }} -  
+                {{ contactsAction[contact._id._id] }}
+                {{ contactsMessage[contact._id._id] }}
+            </li>
+        </ul>
+    	
+    </li>
+
+    <input type="button" value="Test" ng-click="testChange()" />
+</ul>

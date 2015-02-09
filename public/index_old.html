@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html data-ng-app="CVApp" lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio :: Bryan Butler</title>
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--HTML Shiv-->
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+
+		<!--<link href='http://fonts.googleapis.com/css?family=Stoke:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>-->
+
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	</head>
+	<body>
+		<header>
+			
+		</header>
+		<section id="ad" class="rgAd rg" ui-view="ad"></section>
+		<section id="ad" class="rgAd rg" ui-view="main"></section>
+		<wrapper>
+			<canvas id="CVCanvas" width="900" height="800"></canvas>
+		</wrapper>
+
+		<!--Create JS -->
+		<script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
+		  
+	  <!-- Angular -->
+	  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+	  <!-- UI-Router -->
+	  <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+	   <script type="text/javascript" src="scripts/create.js"></script>
+	   <script type="text/javascript" src="scripts/app.js"></script>
+	   <script type="text/javascript" src="scripts/services/services_main.js"></script>
+	   <script type="text/javascript" src="scripts/controllers/controllers_main.js"></script>
+	   <script type="text/javascript" src="scripts/filters/f_main.js"></script>
+	  
+	</body>
+
+</html>
